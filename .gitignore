@@ -1,0 +1,13 @@
+```
+# Don't upload these large CSV files
+tmdb_5000_movies.csv
+tmdb_5000_credits.csv
+
+# Don't upload Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Don't upload environment
+venv/
+env/
