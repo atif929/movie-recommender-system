@@ -1,3 +1,24 @@
+import os
+import requests
+
+# --- DOWNLOAD SCRIPT START ---
+# REPLACE THE URL BELOW with the link you copied from the Releases page in the previous step!
+url = "https://github.com/atif929/movie-recommender-system/releases/download/v1.0.0/similarity.pkl"
+filename = "similarity.pkl"
+
+if not os.path.exists(filename):
+    print(f"Downloading {filename}...")
+    response = requests.get(url, stream=True)
+    with open(filename, 'wb') as f:
+        for chunk in response.iter_content(chunk_size=8192):
+            f.write(chunk)
+    print("Download complete!")
+# --- DOWNLOAD SCRIPT END ---
+
+
+
+# Your original code starts here...
+
 import streamlit as st
 import pickle
 import requests
@@ -124,4 +145,5 @@ st.markdown("")
 footer_col1, footer_col2, footer_col3 = st.columns([1, 2, 1])
 with footer_col2:
     st.caption("Powered by TMDB API | Built with Streamlit")
+
     st.caption("💡 Tip: Try different movies to explore more recommendations!")
