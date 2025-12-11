@@ -7,7 +7,7 @@ import os
 # 1. PAGE CONFIGURATION
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="Movie Recommender",
+    page_title="🎬 Movie Recommender",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -187,3 +187,4 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
